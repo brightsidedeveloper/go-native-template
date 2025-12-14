@@ -1,7 +1,8 @@
 package graph
 
 import (
-	"github.com/brightsidedeveloper/loop/internal/email"
+	"github.com/brightsidedeveloper/go-native-template/internal/email"
+
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 

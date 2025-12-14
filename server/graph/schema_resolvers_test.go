@@ -5,9 +5,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/brightsidedeveloper/loop/graph/model"
-	"github.com/brightsidedeveloper/loop/internal/auth"
-	"github.com/brightsidedeveloper/loop/internal/email"
+	"github.com/brightsidedeveloper/go-native-template/graph/model"
+	"github.com/brightsidedeveloper/go-native-template/internal/auth"
+	"github.com/brightsidedeveloper/go-native-template/internal/email"
+
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -5,9 +5,10 @@ import (
 	"maps"
 	"time"
 
+	"github.com/brightsidedeveloper/go-native-template/graph/model"
+	"github.com/brightsidedeveloper/go-native-template/internal/auth"
+
 	"github.com/99designs/gqlgen/graphql"
-	"github.com/brightsidedeveloper/loop/graph/model"
-	"github.com/brightsidedeveloper/loop/internal/auth"
 	"github.com/vektah/gqlparser/v2/gqlerror"
 )
 

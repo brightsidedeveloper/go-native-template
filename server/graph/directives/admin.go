@@ -3,9 +3,10 @@ package directives
 import (
 	"context"
 
+	"github.com/brightsidedeveloper/go-native-template/graph"
+	"github.com/brightsidedeveloper/go-native-template/internal/auth"
+
 	"github.com/99designs/gqlgen/graphql"
-	"github.com/brightsidedeveloper/loop/graph"
-	"github.com/brightsidedeveloper/loop/internal/auth"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 

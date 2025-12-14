@@ -1,4 +1,4 @@
-module github.com/brightsidedeveloper/loop
+module github.com/brightsidedeveloper/go-native-template
 
 go 1.24.1
 

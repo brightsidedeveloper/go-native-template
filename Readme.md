@@ -48,3 +48,15 @@ go run server.go
 ## Architecture
 
 Mobile communicates with server via GraphQL over HTTP/WebSocket. Authentication uses JWT tokens stored securely on device. Server uses directive-based authorization (`@auth`, `@admin`) with middleware for rate limiting and CORS.
+
+## Templating
+
+This repository includes a CLI tool to template the project with your own names. See the [CLI README](cli/README.md) for details.
+
+Quick start:
+
+```bash
+cd cli
+go build -o template-cli
+./template-cli --project myapp --repo https://github.com/brightsidedeveloper/go-native-template.git --dir ../my-new-project
+```

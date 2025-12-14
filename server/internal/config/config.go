@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/brightsidedeveloper/loop/internal/logger"
+	"github.com/brightsidedeveloper/go-native-template/internal/logger"
 )
 
 // Config holds application configuration

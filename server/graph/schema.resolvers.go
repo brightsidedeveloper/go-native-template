@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/brightsidedeveloper/loop/graph/model"
-	"github.com/brightsidedeveloper/loop/internal/auth"
-	"github.com/brightsidedeveloper/loop/internal/validation"
+	"github.com/brightsidedeveloper/go-native-template/graph/model"
+	"github.com/brightsidedeveloper/go-native-template/internal/auth"
+	"github.com/brightsidedeveloper/go-native-template/internal/validation"
 )
 
 // Signup is the resolver for the signup field.

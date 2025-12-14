@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/brightsidedeveloper/loop/internal/logger"
+	"github.com/brightsidedeveloper/go-native-template/internal/logger"
 )
 
 // RequestLogging logs HTTP requests with structured logging
