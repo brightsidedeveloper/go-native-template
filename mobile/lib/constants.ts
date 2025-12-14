@@ -1,4 +1,3 @@
-const PROD = "https://gql.brightsideserve.com/query";
-const jakesIp = "http://192.168.86.29:8080/query";
+const PROD = 'https://gql.brightsideserve.com/query'
 
-export const HTTP_ENDPOINT = PROD;
+export const HTTP_ENDPOINT = PROD
