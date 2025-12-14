@@ -25,8 +25,8 @@ type Config struct {
 // LoadConfig loads email configuration from environment variables
 func LoadConfig() *Config {
 	return &Config{
-		FromEmail:    getEnv("EMAIL_FROM", "noreply@loop.app"),
-		FromName:     getEnv("EMAIL_FROM_NAME", "Loop"),
+		FromEmail:    getEnv("EMAIL_FROM", "noreply@template.app"),
+		FromName:     getEnv("EMAIL_FROM_NAME", "Template"),
 		FrontendURL:  getEnv("FRONTEND_URL", "http://localhost:3000"),
 		ResendAPIKey: os.Getenv("RESEND_API_KEY"),
 	}

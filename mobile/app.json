@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "loop",
-    "slug": "loop",
+    "name": "template",
+    "slug": "template",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "loop",
+    "scheme": "template",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

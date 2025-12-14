@@ -1,4 +1,4 @@
-# Loop
+# Template
 
 Full-stack application with React Native mobile client and Go GraphQL server.
 
