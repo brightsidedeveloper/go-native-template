@@ -1,4 +1,4 @@
-PHONY: up down fresh migrate-up migrate-down migrate-create psql gen port test test-short test-coverage test-setup run
+PHONY: up down fresh migrate-up migrate-down migrate-create psql gen port test test-short test-coverage test-setup run create-jwt-keys
 
 include .env
 export
@@ -63,3 +63,7 @@ test-setup:
 
 port:
 	ifconfig | grep "inet " | grep -v 127.0.0.1
+
+create-jwt-keys:
+	openssl genrsa -out private.pem 2048; \
+	openssl rsa -in private.pem -pubout -out public.pem
