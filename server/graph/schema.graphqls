@@ -1,0 +1,68 @@
+directive @auth on FIELD_DEFINITION
+directive @admin on FIELD_DEFINITION
+
+type Query {
+  me: User @auth
+  allUsers(limit: Int = 50, offset: Int = 0): UsersConnection! @admin
+  user(id: ID!): User @admin
+  systemStats: SystemStats! @admin
+}
+
+type Mutation {
+  signup(email: String!, password: String!): Session!
+  login(email: String!, password: String!): Session!
+  logout: Boolean! @auth
+  refreshToken(refreshToken: String!): Session!
+  updateUser(input: UpdateUserInput!): User! @auth
+  sendVerificationEmail: Boolean! @auth
+  verifyEmail(token: String!): Boolean!
+  forgotPassword(email: String!): Boolean!
+  resetPassword(token: String!, newPassword: String!): Boolean!
+  changePassword(oldPassword: String!, newPassword: String!): Boolean! @auth
+
+  # Admin mutations
+  revokeUserTokens(userId: ID!): Boolean! @admin
+  lockUser(userId: ID!, durationMinutes: Int = 60): Boolean! @admin
+  unlockUser(userId: ID!): Boolean! @admin
+  deleteUser(userId: ID!): Boolean! @admin
+  updateUserRole(userId: ID!, role: UserRole!): User! @admin
+}
+
+input UpdateUserInput {
+  firstName: String
+  lastName: String
+}
+
+type Session {
+  accessToken: String!
+  refreshToken: String!
+}
+
+type User {
+  id: ID!
+  email: String!
+  emailVerified: Boolean!
+  firstName: String
+  lastName: String
+  role: UserRole!
+  locked: Boolean!
+  createdAt: String!
+}
+
+enum UserRole {
+  USER
+  ADMIN
+}
+
+type UsersConnection {
+  users: [User!]!
+  totalCount: Int!
+  hasMore: Boolean!
+}
+
+type SystemStats {
+  totalUsers: Int!
+  verifiedUsers: Int!
+  lockedUsers: Int!
+  adminUsers: Int!
+}
